@@ -25,3 +25,7 @@ Bred by MARDI.
 ## Credits
 
 The page includes code from the Anatomy kit, MIT License, Copyright (c) 2026 Ryan.
+
+## Also here
+
+- [`vertical-farm/`](vertical-farm/): a separate figure built the same way, a four-tier vertical farm rack of lettuce under LED light. Open it at https://jamesbarker185.github.io/mr219-rice/vertical-farm/
