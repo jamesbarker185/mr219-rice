@@ -1,0 +1,144 @@
+.mr {
+  --mr-water: #8fb3c4;
+  --mr-mud: #8a7458;
+  --mr-pan: #6e5c47;
+  --mr-sub: #b4a07f;
+  --mr-stone: #d8cdb8;
+  --mr-leaf: #b9d39a;
+  --mr-leaf-line: #5d7d43;
+  --mr-ripe: #e4cf86;
+  --mr-ripe-line: #9c7f2e;
+  --mr-grain: #d9b54c;
+  --mr-root: #f0e6d2;
+  --mr-arc-mr: #d9b54c;
+  --mr-arc-tall: #b4b4b8;
+  --mr-rain: #6f8fa0;
+}
+
+.iso[data-theme="dark"] .mr {
+  --mr-water: #3f6f86;
+  --mr-mud: #4a3d2e;
+  --mr-pan: #3a2f24;
+  --mr-sub: #5d5040;
+  --mr-stone: #2a2520;
+  --mr-leaf: #3f5a2c;
+  --mr-leaf-line: #8fb36d;
+  --mr-ripe: #6b5a28;
+  --mr-ripe-line: #d9bd62;
+  --mr-grain: #c9a440;
+  --mr-root: #cdbf9f;
+  --mr-arc-tall: #4a4a4a;
+  --mr-rain: #8fb3c4;
+}
+
+.mr .iso-plate {
+  overflow: hidden;
+}
+
+.mr-credit {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  color: var(--anatomy-muted);
+  font-family: var(--anatomy-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.mr-stage {
+  position: relative;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: ew-resize;
+  margin: 0 -8px;
+}
+
+.mr-stage:focus-visible {
+  outline: 1px solid var(--anatomy-muted);
+  outline-offset: 6px;
+}
+
+.mr-stage > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mr-said {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.mr-mud { fill: var(--mr-mud); fill-opacity: 0.55; stroke: none; }
+.mr-pan { fill: var(--mr-pan); fill-opacity: 0.6; stroke: none; }
+.mr-sub { fill: var(--mr-sub); fill-opacity: 0.45; stroke: none; }
+.mr-stone { fill: var(--mr-stone); stroke: none; }
+.mr-water { fill: var(--mr-water); fill-opacity: 0.42; stroke: none; }
+.mr-water-face { fill-opacity: 0.55; }
+.mr-arc { stroke: none; }
+.mr-arc-mr { fill: var(--mr-arc-mr); fill-opacity: 0.85; }
+.mr-arc-tall { fill: var(--mr-arc-tall); fill-opacity: 0.9; }
+
+.mr-hill .leaf { stroke-width: 0.45; stroke-linejoin: round; }
+.mr-hill .stem { fill: none; stroke-width: 0.7; stroke-linecap: round; }
+.mr-hill .rachis { fill: none; stroke-width: 0.55; stroke-linecap: round; }
+.mr-hill .grain { stroke-width: 0.3; }
+.mr-hill .ring { fill: none; stroke: var(--anatomy-lo); stroke-width: 0.45; }
+.mr-root { fill: none; stroke: var(--mr-root); stroke-width: 0.45; stroke-linecap: round; }
+.mr-rain { stroke: var(--mr-rain); stroke-width: 0.55; stroke-linecap: round; fill: none; }
+.mr-ripple { fill: none; stroke: var(--mr-rain); stroke-width: 0.4; }
+
+.mr-table {
+  width: 100%;
+  margin: 10px 0 -18px;
+  border-collapse: collapse;
+  font-family: var(--anatomy-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--anatomy-text);
+}
+
+.mr-table th,
+.mr-table td {
+  padding: 4px 6px;
+  text-align: right;
+  font-weight: 400;
+  border-top: 1px solid var(--anatomy-faint);
+  white-space: nowrap;
+}
+
+.mr-table thead th {
+  border-top: none;
+  color: var(--anatomy-muted);
+  vertical-align: bottom;
+}
+
+.mr-table thead th span {
+  display: block;
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.mr-table tbody th {
+  text-align: left;
+  color: var(--anatomy-muted);
+}
+
+.mr-table td[data-cell^="mr-"] {
+  color: var(--anatomy-strong);
+}
+
+@media (max-width: 560px) {
+  .mr-credit { top: 32px; right: 12px; font-size: 8.5px; }
+  .mr-stage { margin: 0 -10px; }
+  .mr-table { font-size: 10px; }
+  .mr-table th, .mr-table td { padding: 3px 3px; }
+}
